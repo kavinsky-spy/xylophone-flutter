@@ -6,7 +6,11 @@ void main() {
 }
 
 class XylophoneApp extends StatelessWidget {
-  void playSound() {}
+  void playSound(int soundNumber) {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$soundNumber.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -19,8 +23,7 @@ class XylophoneApp extends StatelessWidget {
               children: [
                 TextButton(
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(AssetSource('note1.wav'));
+                      playSound(1);
                     },
                     child: Container(
                       width: 150,
@@ -29,8 +32,7 @@ class XylophoneApp extends StatelessWidget {
                     )),
                 TextButton(
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(AssetSource('note2.wav'));
+                      playSound(2);
                     },
                     child: Container(
                       width: 150,
@@ -39,8 +41,7 @@ class XylophoneApp extends StatelessWidget {
                     )),
                 TextButton(
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(AssetSource('note3.wav'));
+                      playSound(3);
                     },
                     child: Container(
                       width: 150,
@@ -49,8 +50,7 @@ class XylophoneApp extends StatelessWidget {
                     )),
                 TextButton(
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(AssetSource('note4.wav'));
+                      playSound(4);
                     },
                     child: Container(
                       width: 150,
@@ -59,8 +59,7 @@ class XylophoneApp extends StatelessWidget {
                     )),
                 TextButton(
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(AssetSource('note5.wav'));
+                      playSound(5);
                     },
                     child: Container(
                       width: 150,
@@ -69,8 +68,7 @@ class XylophoneApp extends StatelessWidget {
                     )),
                 TextButton(
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(AssetSource('note6.wav'));
+                      playSound(6);
                     },
                     child: Container(
                       width: 150,
@@ -79,8 +77,7 @@ class XylophoneApp extends StatelessWidget {
                     )),
                 TextButton(
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(AssetSource('note7.wav'));
+                      playSound(7);
                     },
                     child: Container(
                       width: 150,
